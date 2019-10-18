@@ -16,7 +16,7 @@ const [results, setResults] = useState([]);
                 }
             });
             setResults(response.data.businesses);
-            console.log(response.data.businesses);
+            //console.log(response.data.businesses);
         }
         catch(e) {
             setErrorMessage('Something went wrong!');
@@ -26,5 +26,4 @@ const [results, setResults] = useState([]);
     useEffect(()=> {searchApi('pasta')}, []);
 
     return [searchApi, results, errorMessage];
-
 };
